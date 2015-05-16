@@ -8,6 +8,32 @@
     mc:Ignorable="d">
 
     <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
-
+        <TextBlock
+            TextWrapping="WrapWholeWords"
+            HorizontalAlignment="Center" 
+            VerticalAlignment="Center" 
+            Text="What is your name?" 
+            TextAlignment="Center"
+            Margin="112,43,92,577" Width="156"/>
+            
+        <TextBox MinWidth="150" 
+                 HorizontalAlignment="Center" 
+                 VerticalAlignment="Center" 
+                 Name="InputTextBox"
+                 Text="Name"
+                 TextAlignment="Center"
+                 Margin="112,104,98,504"/>
+        <Button
+            Name="Create"
+            Content="Create Food"
+            Width="150"
+            Height="35"
+            Margin="112,375,0,230"/>
+        <Button
+            Name="View"
+            Content="View YumYums"
+            Width="150"
+            Height="35" 
+            Margin="112,461,0,144"/>
     </Grid>
 </Page>
