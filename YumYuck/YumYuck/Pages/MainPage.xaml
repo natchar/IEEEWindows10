@@ -8,33 +8,36 @@
     mc:Ignorable="d">
 
     <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
-        <TextBlock
-            TextWrapping="WrapWholeWords"
-            HorizontalAlignment="Center" 
-            VerticalAlignment="Center" 
-            Text="What is your name?" 
-            TextAlignment="Center"
-            Margin="252,35,232,305" Width="156"/>
-            
-        <TextBox MinWidth="150" 
-            HorizontalAlignment="Center" 
-            VerticalAlignment="Center" 
-            x:Name="InputTextBox"
-            Text="Name"
-            TextAlignment="Center"
-            Margin="252,60,238,268"/>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="33*"/>
+            <ColumnDefinition Width="31*"/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+
+
+
+
         <Button
+            Grid.Row="0"
             x:Name="Create"
             Content="Create Food"
             Click="GoToCreatePage"
-            Width="150"
-            Height="35"
-            Margin="252,205,0,120"/>
+            
+           HorizontalAlignment="Center" VerticalAlignment="Center" Width="150" Height="70" Grid.ColumnSpan="2" Margin="245,55"
+            />
         <Button
+            Grid.Row="1"
            x:Name="View"
             Content="View YumYums"
-            Width="150"
-            Height="35" 
-            Margin="252,276,0,49" Click="View_Click"/>
+           
+            
+             Click="View_Click" 
+             HorizontalAlignment="Center" VerticalAlignment="Center"  Width="150" Height="70" Grid.ColumnSpan="2" Margin="245,55"
+            />
+
     </Grid>
 </Page>
