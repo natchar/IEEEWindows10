@@ -6,11 +6,17 @@ using System.Threading.Tasks;
 
 namespace YumYuck.Core
 {
-    class Ingredient
+   public class Ingredient
     {
+        public Ingredient(String Name, String Measure, String Quantity)
+        {
+            this.IngredientName = Name;
+            this.Measurment = Measure;
+            this.Quantity = Quantity;
+        }
         String IngredientName { get; set; }
         String Measurment { get; set; }
-        float Quantity { get; set; }
+        String Quantity { get; set; }
 
         public String getIngredientString()
         {

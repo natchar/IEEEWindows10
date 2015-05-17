@@ -97,10 +97,10 @@
     <Compile Include="Core\Food.cs" />
     <Compile Include="Core\Ingredient.cs" />
     <Compile Include="Core\User.cs" />
-    <Compile Include="CreateFoodPage.xaml.cs">
+    <Compile Include="Pages\CreateFoodPage.xaml.cs">
       <DependentUpon>CreateFoodPage.xaml</DependentUpon>
     </Compile>
-    <Compile Include="MainPage.xaml.cs">
+    <Compile Include="Pages\MainPage.xaml.cs">
       <DependentUpon>MainPage.xaml</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -126,11 +126,11 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
-    <Page Include="CreateFoodPage.xaml">
+    <Page Include="Pages\CreateFoodPage.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="MainPage.xaml">
+    <Page Include="Pages\MainPage.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Page>
