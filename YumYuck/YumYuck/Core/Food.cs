@@ -18,9 +18,9 @@ namespace YumYuck.Core
             this.Recipe = recipe;
         }
       public String Name { get; set; }
-        BitmapImage MainPhoto { get; set; }
-        List<Ingredient> Ingredients { get; set; }
-        String Description { get; set; }
-        String Recipe { get; set; }
+       public BitmapImage MainPhoto { get; set; }
+       public List<Ingredient> Ingredients { get; set; }
+      public  String Description { get; set; }
+      public  String Recipe { get; set; }
     }
 }

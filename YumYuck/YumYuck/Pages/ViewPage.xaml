@@ -8,11 +8,22 @@
     mc:Ignorable="d">
 
     <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
-        <ListBox x:Name="listBox1" HorizontalAlignment="Left" Height="264" Margin="22,42,0,0" VerticalAlignment="Top" Width="141">
-           
+        <ListBox x:Name="listBox1" HorizontalAlignment="Left" Height="264" Margin="22,42,0,0" VerticalAlignment="Top" Width="141" SelectionChanged="listBox1_SelectionChanged">
+
         </ListBox>
         <StackPanel HorizontalAlignment="Left" Height="264" Margin="22,21,0,0" VerticalAlignment="Top" Width="141"/>
         <Button x:Name="button" Content="Back" HorizontalAlignment="Left" Margin="41,318,0,0" VerticalAlignment="Top" Width="103" Click="button_Click"/>
-        <TextBox x:Name="textBox" HorizontalAlignment="Left" Margin="274,95,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="204" Height="94"/>
+        <TextBlock x:Name="nameText" HorizontalAlignment="Left" Margin="198,21,0,0" TextWrapping="Wrap" Text="Name" VerticalAlignment="Top" Height="52" Width="268" SelectionChanged="textBlock_SelectionChanged" FontSize="26.667" FontWeight="Bold"/>
+        <Image x:Name="foodPic" HorizontalAlignment="Left" Height="133" Margin="198,89,0,0" VerticalAlignment="Top" Width="170"/>
+        <TextBlock x:Name="textBlock" HorizontalAlignment="Left" Margin="421,71,0,0" TextWrapping="Wrap" Text="Description" VerticalAlignment="Top"/>
+        <TextBlock x:Name="textBlock1" HorizontalAlignment="Left" Margin="421,206,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="130" SelectionChanged="textBlock1_SelectionChanged">
+        	<Run Text="Indeg"/>
+        	<Run Text="re"/>
+        	<Run Text="dients"/>
+        </TextBlock>
+        <TextBlock x:Name="textBlock2" HorizontalAlignment="Left" Margin="183,250,0,0" TextWrapping="Wrap" Text="Recipe" VerticalAlignment="Top"/>
+        <TextBlock x:Name="recipeText" HorizontalAlignment="Left" Margin="183,275,0,-34" TextWrapping="Wrap" Text="TextBlock" VerticalAlignment="Top" Height="119" Width="185" FontSize="9.333"/>
+        <TextBlock x:Name="descriptionText" HorizontalAlignment="Left" Margin="421,96,0,0" TextWrapping="Wrap" Text="TextBlock" VerticalAlignment="Top" Height="89" Width="176" FontSize="9.333"/>
+        <TextBlock x:Name="indegredientsText" HorizontalAlignment="Left" Margin="421,231,0,0" TextWrapping="Wrap" Text="TextBlock" VerticalAlignment="Top" Height="98" Width="161" FontSize="9.333"/>
     </Grid>
 </Page>
