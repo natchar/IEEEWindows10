@@ -35,6 +35,6 @@
             Content="View YumYums"
             Width="150"
             Height="35" 
-            Margin="252,276,0,49"/>
+            Margin="252,276,0,49" Click="View_Click"/>
     </Grid>
 </Page>

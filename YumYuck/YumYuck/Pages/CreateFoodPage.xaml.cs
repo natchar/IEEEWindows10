@@ -36,10 +36,17 @@ namespace YumYuck
         BitmapImage FoodPic = null;
         Food FoodItem;
         List<Ingredient> ingredientList;
+       public static List<Food> foodItems;
 
         public CreateFoodPage()
         {
             this.InitializeComponent();
+
+            //turning on the cache mode for avoiding restore the list after navi to another page
+            this.NavigationCacheMode = Windows.UI.Xaml.Navigation.NavigationCacheMode.Enabled;
+
+            //init the foodItems list
+            foodItems = new List<Food>();
 
             //clears fields of default text when first clicked
             NameField.GotFocus += NameField_GotFocus;
@@ -54,8 +61,9 @@ namespace YumYuck
             IngredientMeasurment.Items.Add("");
             IngredientMeasurment.Items.Add("oz");
 
-
         }
+
+
 
         private void IngredientItem_GotFocus(object sender, RoutedEventArgs e)
         {
@@ -147,7 +155,7 @@ namespace YumYuck
             var instructions = InstructionsField.Text;
 
             //check all fields have been entered
-            if(String.IsNullOrEmpty(name) ||
+            if (String.IsNullOrEmpty(name) ||
                 String.IsNullOrEmpty(desc) ||
                 (ingredientList == null) ||
                 (FoodPic == null) ||
@@ -158,9 +166,15 @@ namespace YumYuck
                 await dialog.ShowAsync();
                 return;
             }
+            else
+            {
+                FoodItem = new Food(name, FoodPic, ingredientList, desc, instructions);
 
-            FoodItem = new Food(name, FoodPic, ingredientList, desc, instructions);
-            //TODO save this food item
+
+                //TODO save this food item
+                foodItems.Add(FoodItem);
+                this.Frame.Navigate(typeof(MainPage));
+            }
         }
     }
 }
