@@ -8,8 +8,8 @@
     mc:Ignorable="d">
 
     <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
-        <Image x:Name="MainPicture" HorizontalAlignment="Left" Height="150" Margin="382,27,0,0" VerticalAlignment="Top" Width="248" />
-        <Button x:Name="ChoosePicture" Content="Pick a Pretty Photo" HorizontalAlignment="Left" Margin="423,182,0,0" VerticalAlignment="Top" Width="Auto" Click="PickPicture"/>
+        <Image x:Name="MainPicture" HorizontalAlignment="Left" Height="124" Margin="382,27,0,0" VerticalAlignment="Top" Width="248" />
+        <Button x:Name="ChoosePicture" Content="Pick a Pretty Photo" HorizontalAlignment="Left" Margin="448,156,0,0" VerticalAlignment="Top" Width="Auto" Click="PickPicture"/>
         <TextBox x:Name="NameField" HorizontalAlignment="Left" Margin="104,94,0,0" TextWrapping="Wrap" Text="Apple Pie" VerticalAlignment="Top" Width="Auto"/>
         <TextBlock x:Name="Name" HorizontalAlignment="Left" Margin="59,94,0,0" TextWrapping="Wrap" Text="Name" VerticalAlignment="Top" Height="32" Width="Auto"/>
         <TextBlock x:Name="Description" HorizontalAlignment="Left" Margin="24,131,0,0" TextWrapping="Wrap" Text="Description" VerticalAlignment="Top"/>
@@ -17,12 +17,13 @@
         <TextBlock x:Name="Ingredients" HorizontalAlignment="Left" Margin="24,198,0,0" TextWrapping="Wrap" Text="Ingredients" VerticalAlignment="Top" Width="Auto"/>
         <ListView x:Name="IngredientsList" HorizontalAlignment="Left" Height="99" Margin="104,235,0,0" VerticalAlignment="Top" Width="204" ScrollViewer.VerticalScrollBarVisibility="Auto"/>
         <TextBlock x:Name="Title" HorizontalAlignment="Left" Margin="50,27,0,0" TextWrapping="Wrap" Text="New Recipe!" FontSize="35" FontWeight="Bold" Foreground="Gray" VerticalAlignment="Top" Height="62" Width="Auto"/>
-        <TextBlock x:Name="Instructions" HorizontalAlignment="Left" Margin="366,248,0,0" TextWrapping="Wrap" Text="Instructions:" VerticalAlignment="Top" Width="Auto"/>
+        <TextBlock x:Name="Instructions" HorizontalAlignment="Left" Margin="364,198,0,0" TextWrapping="Wrap" Text="Instructions:" VerticalAlignment="Top" Width="Auto"/>
         <TextBox x:Name="IngredientQuantity" HorizontalAlignment="Left" Margin="104,198,0,0" TextWrapping="Wrap" Text="2" TextAlignment="Center"  VerticalAlignment="Top" Width="Auto" Height="30"/>
         <ComboBox x:Name="IngredientMeasurment" HorizontalAlignment="Left" Margin="173,198,0,0" VerticalAlignment="Top" Width="55"/>
         <TextBox x:Name="IngredientItem" HorizontalAlignment="Left" Margin="237,198,0,0" TextWrapping="Wrap" Text="Carrots" VerticalAlignment="Top"/>
         <Button x:Name="IngredientAdd" Content="+" HorizontalAlignment="Left" Margin="311,198,0,0" VerticalAlignment="Top" Click="IngredientAdd_Click"/>
-        <TextBox x:Name="InstructionsField" HorizontalAlignment="Left" Margin="451,248,0,0" TextWrapping="Wrap" Text="How to make the om-noms" VerticalAlignment="Top" Width="179" Height="102"/>
+        <TextBox x:Name="InstructionsField" HorizontalAlignment="Left" Margin="448,193,0,0" TextWrapping="Wrap" Text="How to make the om-noms" VerticalAlignment="Top" Width="179" Height="102"/>
+        <Button x:Name="Save" Content="Save" HorizontalAlignment="Left" Margin="579,318,0,0" VerticalAlignment="Top" Click="Save_Click"/>
 
     </Grid>
 </Page>

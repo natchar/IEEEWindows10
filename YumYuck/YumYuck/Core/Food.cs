@@ -7,8 +7,16 @@ using Windows.UI.Xaml.Media.Imaging;
 
 namespace YumYuck.Core
 {
-    class Food
+    public class Food
     {
+        public Food(String name, BitmapImage photo, List<Ingredient> ingredList, String desc, String recipe)
+        {
+            this.Name = name;
+            this.MainPhoto = photo;
+            this.Ingredients = ingredList;
+            this.Description = desc;
+            this.Recipe = recipe;
+        }
         String Name { get; set; }
         BitmapImage MainPhoto { get; set; }
         List<Ingredient> Ingredients { get; set; }
