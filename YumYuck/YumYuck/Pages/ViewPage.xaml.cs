@@ -11,6 +11,7 @@ using Windows.UI.Xaml.Controls.Primitives;
 using Windows.UI.Xaml.Data;
 using Windows.UI.Xaml.Input;
 using Windows.UI.Xaml.Media;
+using Windows.UI.Xaml.Media.Imaging;
 using Windows.UI.Xaml.Navigation;
 using YumYuck.Core;
 
@@ -42,6 +43,8 @@ namespace YumYuck
                 foodNames.Add(f.Name);            
                     }
 
+            if(CreateFoodPage.foodItems != null)
+                populateRecipe(); //dummy list
 
             listBox1.ItemsSource = foodNames;
           
@@ -60,7 +63,28 @@ namespace YumYuck
             //      stackPanel1.Children.Add(listBox1);
 
         }
-    
+
+        private void populateRecipe()
+        {
+            List<Food> foodList = new List<Food>();
+            var foodPic = new BitmapImage(new Uri("ms-appx://Assets/brownies.jpg"));
+            var ingredients = new List<Ingredient>();
+            ingredients.Add(new Ingredient("chocolate", "5", "cups"));
+            ingredients.Add(new Ingredient("flour", "2", "cups"));
+            foodList.Add(new Food("Brownies", foodPic, ingredients, "warm and gooey", "mix all ingredients and heat"));
+
+            foodPic = new BitmapImage(new Uri("ms-appx://Assets/meatball.jpg"));
+            ingredients.Clear();
+            ingredients.Add(new Ingredient("ground beef", "500", "ml"));
+            ingredients.Add(new Ingredient("salt", "5", "ml"));
+            foodList.Add(new Food("meatball", foodPic, ingredients, "Beef balls", "Mix, make balls round"));
+
+            foreach (Food f in foodList)
+            {
+                listBox1.Items.Add(f.Name);
+                CreateFoodPage.foodItems.Add(f);
+            }
+        }
 
         private void listBox1_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
