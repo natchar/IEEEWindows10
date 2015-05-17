@@ -25,6 +25,12 @@ namespace YumYuck
         public MainPage()
         {
             this.InitializeComponent();
+           
+        }
+
+        private void GoToCreatePage(object sender, RoutedEventArgs e)
+        {
+            this.Frame.Navigate(typeof(CreateFoodPage));
         }
     }
 }
